@@ -9,8 +9,8 @@ class PostController extends Controller
 {
     public function index()
     {
-        // $posts  = Post::lastest()->get();
-        $posts  = Post::all();
+        $posts  = Post::latest()->get();
+        // $posts  = Post::all();
         return view('posts.index', ['posts' => $posts]);
     }
 
@@ -21,6 +21,18 @@ class PostController extends Controller
     }
     public function create()
     {
+
         return view('posts.create');
+    }
+    public function store()
+    {
+        $post = new Post();
+
+        $post->title = request('title');
+        $post->body = request('body');
+
+        $post->save();
+
+        return redirect('/posts')->with('message', 'Post Added');
     }
 }

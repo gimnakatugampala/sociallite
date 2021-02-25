@@ -9,7 +9,7 @@
         <div class="card-body">
             <h5 class="card-title">{{$post->title}}</h5>
             <p class="card-text">{{$post->body}}.</p>
-            <p class="card-text">Posted By : {{$post->user}}.</p>
+            <p class="card-text">Created At : {{$post->created_at}}.</p>
             <a href="/posts/{{$post->id}}" class="btn btn-primary">See More</a>
         </div>
     </div>
