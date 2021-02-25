@@ -6,7 +6,7 @@
         <div class="card-body">
             <h5 class="card-title">{{$post->title}}</h5>
             <p class="card-text">{{$post->body}}</p>
-            <a href="/posts" class="btn btn-primary edit-delete">Go Back</a>
+            <a href="{{route('posts.index')}}" class="btn btn-primary edit-delete">Go Back</a>
             <form action="/posts/{{$post->id}}" method="POST">
                 @csrf
                 @method('DELETE')

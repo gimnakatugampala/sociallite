@@ -15,7 +15,7 @@
             <h5 class="card-title">{{$post->title}}</h5>
             <p class="card-text">{{$post->body}}.</p>
             <p class="card-text">Created At : {{$post->created_at}}.</p>
-            <a href="/posts/{{$post->id}}" class="btn btn-primary">See More</a>
+            <a href="{{route('posts.show',$post->id)}}" class="btn btn-primary">See More</a>
         </div>
     </div>
     @endforeach

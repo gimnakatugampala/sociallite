@@ -14,7 +14,7 @@
                     </div>
                     @endif
 
-                    <a href="/posts" class="btn btn-primary container">Go Home</a>
+                    <a href="{{route('posts.index')}}" class="btn btn-primary container">Go Home</a>
                 </div>
             </div>
         </div>
