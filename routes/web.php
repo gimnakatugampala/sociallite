@@ -23,6 +23,7 @@ Route::get('/posts', [PostController::class, 'index']);
 Route::post('/posts', [PostController::class, 'store']);
 Route::get('/posts/create', [PostController::class, 'create']);
 Route::get('/posts/{id}', [PostController::class, 'show']);
+Route::delete('/posts/{id}', [PostController::class, 'destroy']);
 
 
 Auth::routes();

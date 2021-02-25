@@ -101,6 +101,23 @@ footer {
     margin: auto;
     margin-top: 10px;
 }
+
+.created {
+    background-color: #27ae60;
+    color: white;
+    padding: 15px;
+    width: 300px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.delete {
+    background-color: #af1d1d;
+    color: white;
+    padding: 15px;
+    width: 300px;
+    margin: auto;
+    margin-bottom: 10px;
+}
 *,
 :after,
 :before {
@@ -408,6 +425,16 @@ video {
         display: inline;
         margin: auto;
         margin-top: 10px;
+    }
+    .created {
+        background-color: #27ae60;
+        color: white;
+        padding: 15px;
+    }
+    .delete {
+        background-color: #af1d1d;
+        color: white;
+        padding: 15px;
     }
 }
 

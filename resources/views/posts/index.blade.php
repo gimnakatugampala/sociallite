@@ -4,6 +4,11 @@
 <div class="wrapper all-posts">
     <h3>See the World Around You</h3>
 
+    <p class="created">{{session('message')}}</p>
+
+    <p class="delete">{{session('delete')}}</p>
+
+
     @foreach($posts as $post)
     <div class="card">
         <div class="card-body">
@@ -15,5 +20,26 @@
     </div>
     @endforeach
 </div>
+
+<script>
+    const deleted = document.querySelector('.delete');
+    const created = document.querySelector('.created');
+
+    setTimeout(function() {
+        document.querySelector('.created').remove();
+    }, 2000)
+
+    setTimeout(function() {
+        document.querySelector('.delete').remove();
+    }, 2000)
+
+    if (deleted.textContent === '') {
+        deleted.style.backgroundColor = 'white';
+    }
+
+    if (created.textContent === '') {
+        created.style.backgroundColor = 'white';
+    }
+</script>
 
 @endsection

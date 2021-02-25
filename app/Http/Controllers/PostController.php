@@ -35,4 +35,12 @@ class PostController extends Controller
 
         return redirect('/posts')->with('message', 'Post Added');
     }
+
+    public function destroy($id)
+    {
+        $post = Post::findOrFail($id);
+        $post->delete();
+
+        return redirect('/posts')->with('delete', 'Post Deleted');
+    }
 }
